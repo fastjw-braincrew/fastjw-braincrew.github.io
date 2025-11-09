@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News Brief</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    body { font-family: 'Inter', sans-serif; font-display: swap; }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-blue-50 p-8 min-h-screen">
+  <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <!-- 헤더 섹션 -->
+    <div class="bg-blue-600 p-6 text-white">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold">Daily News Brief</h1>
+          <p class="text-blue-100">2025-11-10</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="material-icons">schedule</i>
+          <span>AM 8:00 기준</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 주요 뉴스 섹션 -->
+    <div class="p-6 space-y-6">
+      <!-- 핵심 이슈 -->
+      <div class="glass-effect p-5 rounded-xl border-l-4 border-blue-600">
+        <h2 class="text-lg font-bold text-blue-800 mb-2">오늘의 핵심 이슈</h2>
+        <p class="text-gray-700 leading-relaxed">
+          • "꼬들꼬들, 갓 튀긴 라면"…구미 라면축제 3일간 35만 명 방문, 48만개 판매 대흥행. 행사장은 QR코드 시스템 도입으로 대기줄 없이 편리했고, 다양한 라면 메뉴와 공연, 포토존 등 체험형 콘텐츠가 큰 호응을 얻으며 축제의 새로운 아이콘으로 자리매김했다.
+        </p>
+      </div>
+
+      <!-- 주요 뉴스 그리드 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 border rounded-lg hover:shadow-md transition-shadow bg-white">
+          <div class="flex items-center space-x-2 mb-2">
+            <i class="material-icons text-blue-600">trending_up</i>
+            <h3 class="font-semibold">시장 동향</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            • 2025 구미라면축제에서 갓 튀긴 라면 48만 개(3억6000만 원 상당) 판매, 라면 레스토랑의 이색 라면 25종 5만4000여 그릇(6억 원 매출) 등 지역경제에 긍정적 파급효과. 축제 기간 동안 구미역 일대와 도심 상권이 북새통을 이루며 활력을 불어넣음.
+          </p>
+        </div>
+
+        <div class="p-4 border rounded-lg hover:shadow-md transition-shadow bg-white">
+          <div class="flex items-center space-x-2 mb-2">
+            <i class="material-icons text-blue-600">business</i>
+            <h3 class="font-semibold">산업 동향</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            • 라면을 중심으로 산업·문화·관광 융합 시도, 글로벌 K-푸드 축제로 육성 중. 신라면 케데헌 에디션 등 한정판 라면, 즉석 조리 메뉴 등 브랜드와 협력 강화. 해외 인플루언서와 외신의 취재로 글로벌 확장 가능성 확인, 라면 관련 산업 홍보 및 지역 브랜드 가치 상승.
+          </p>
+        </div>
+      </div>
+
+      <!-- 주요 인사이트 -->
+      <div class="bg-blue-50 p-4 rounded-xl">
+        <h2 class="text-lg font-bold text-blue-800 mb-3">핵심 인사이트</h2>
+        <div class="space-y-2">
+          <div class="flex items-start space-x-2">
+            <i class="material-icons text-blue-600">lightbulb</i>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              • QR코드 주문 시스템 등 디지털 기술 도입으로 대기시간 최소화, 방문객 편의 증대. 투명 비닐 가방 등 인증샷 아이템은 SNS에서 화제, 축제의 바이럴 확산과 브랜드 이미지 제고에 기여.
+            </p>
+          </div>
+          <div class="flex items-start space-x-2">
+            <i class="material-icons text-blue-600">lightbulb</i>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              • 다양한 체험형 콘텐츠(면치기 대회, 라운지, 포토존, 어린이 놀이터 등)로 가족·젊은 층 모두의 관심을 끌며 세대별 맞춤형 축제 모델 구현. 지역 연계행사로 도심 전체가 축제 분위기로 전환, 도시 브랜딩 효과 강화.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 대응 방안 -->
+      <div class="border-t pt-4">
+        <h2 class="text-lg font-bold text-gray-800 mb-2">권장 대응 방안</h2>
+        <div class="flex items-start space-x-2">
+          <i class="material-icons text-blue-600">arrow_forward</i>
+          <p class="text-sm text-gray-700 leading-relaxed">
+            • 지역축제 기획 시 디지털 결제·대기 시스템 등 혁신적 IT 도입 확대 권장. 브랜드/지역 특산품 연계 상품 개발, 체험형·참여형 프로그램 강화, 가족 및 글로벌 관람객 타깃 홍보 전략 수립. 축제 후 상설 운영관 등 지속적 콘텐츠 제공으로 도시 관광 및 지역경제 활성화 도모.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+      © 2025 Daily News Brief. All rights reserved.<br>
+      <span class="block mt-2">출처: <a href="https://n.news.naver.com/mnews/article/421/0008593426?sid=102#" class="text-blue-600 hover:underline" target="_blank">뉴스1, 네이버뉴스 (2025.11.09)</a></span>
+    </div>
+  </div>
+</body>
+</html>
