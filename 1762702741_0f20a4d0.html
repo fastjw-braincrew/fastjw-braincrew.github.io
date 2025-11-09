@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공공업무 혁신 AI 워크플로우 보고서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <!-- 헤더 섹션 -->
+        <div class="bg-blue-600 p-6 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-2xl font-bold">공공업무 혁신 AI 워크플로우 보고서</h1>
+                    <p class="text-blue-100">2025-11-10</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="material-icons">schedule</i>
+                    <span>AM 8:00 기준</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 주요 이슈 섹션 -->
+        <div class="p-6 space-y-6">
+            <!-- 핵심 이슈 -->
+            <div class="glass-effect p-4 rounded-xl border-l-4 border-blue-600">
+                <h2 class="text-lg font-bold text-blue-800 mb-2">오늘의 핵심 이슈</h2>
+                <p class="text-gray-700">
+                    • 공공업무 혁신을 위한 AI 워크플로우 도입과 실제 툴 활용 방안에 대한 전문적 분석. 
+                    다양한 공공기관 및 기업에서 생성형 AI, LLM, 에이전트 기반 자동화의 최신 트렌드와 도입 전략이 주요 이슈로 부상함.
+                </p>
+            </div>
+
+            <!-- 주요 뉴스 그리드 -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-blue-600">trending_up</i>
+                        <h3 class="font-semibold">시장 동향</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        • 2022년 ChatGPT 출시 이후, RAG(검색 증강 생성) 구조와 Agentic AI, 통합 에이전트 플랫폼 도입이 빠르게 확산 중. 
+                        주요 AI 기업(OpenAI, Anthropic, Google 등)이 MCP(Model Context Protocol)과 A2A 프로토콜 등 상호운용성 및 보안 강화 표준을 발표하며 시장이 재편되고 있음.
+                    </p>
+                </div>
+
+                <div class="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-blue-600">business</i>
+                        <h3 class="font-semibold">산업 동향</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        • 공공기관, 대기업, 교육기관 등에서 AI 워크플로우 도입이 가속화. 
+                        삼성전자, SK, 소방청, LH공사, 현대차, 환경공단, 서울대 등 다양한 공공 및 민간 단체가 LLM 기반 자동화와 데이터 분석, RAG 챗봇, 노코드 툴(Dify, n8n 등) 활용 교육을 확대 중.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 주요 인사이트 -->
+            <div class="bg-blue-50 p-4 rounded-xl">
+                <h2 class="text-lg font-bold text-blue-800 mb-3">핵심 인사이트</h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-blue-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">
+                            • AI 워크플로우는 반복적·정형적 업무뿐만 아니라 비정형 데이터(문서, 대화, 이메일 등) 자동화, 의도 추론 기반 업무 프로세스 혁신까지 범위를 확대하며, 
+                            조직 내 생산성을 획기적으로 향상시킬 수 있음.
+                        </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-blue-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">
+                            • 워크플로우 툴(n8n, Dify, make 등)은 오픈소스 생태계와 시각적 UI 및 MCP 표준 지원을 바탕으로, 
+                            비개발자도 쉽게 AI 기반 자동화 시스템을 설계·운영할 수 있는 환경을 제공. 
+                            Guardrail 등 실시간 보안·컴플라이언스 기능이 필수적으로 요구됨.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 대응 방안 -->
+            <div class="border-t pt-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">권장 대응 방안</h2>
+                <div class="flex items-start space-x-2">
+                    <i class="material-icons text-blue-600">arrow_forward</i>
+                    <p class="text-sm text-gray-700">
+                        • 공공기관 및 기업은 AI 워크플로우 도입 시, 내부/외부 데이터 연계·보안, 개인정보 비식별화, 문서 파싱 및 데이터 흐름 투명성, 윤리 기준 준수 등 
+                        6대 고려 사항을 중심으로 전략을 수립해야 함. 
+                        반복적 행정업무 자동화, 대국민 커뮤니케이션 혁신, 내부 지식 관리 등 업무별 맞춤형 툴 활용 전략과 
+                        통합 에이전트 플랫폼 구축이 권장됨.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 경력 및 이력 요약 -->
+        <div class="p-6 border-t">
+            <h2 class="text-lg font-semibold text-blue-800 mb-2">발표자 주요 이력</h2>
+            <ul class="list-disc pl-5 text-sm text-gray-700 space-y-1">
+                <li>성균관대 빅데이터 석사, 현 브레인크루 이사, 중앙소방학교 명예교수</li>
+                <li>삼성전자, GS, SK, 소방청, LH공사, 현대차, 서울대 등 주요 기관·기업 대상 AI 및 데이터 분석 강의 다수</li>
+                <li>노코드툴(Dify, n8n) 활용 AI 에이전트/워크플로우 교육 및 워크숍 진행</li>
+                <li>저서: '일잘러의 비밀', '챗GPT와 GPTs로 나만의 AI 챗봇 만들기' 등, 다수 콘텐츠 감수 및 칼럼 기고</li>
+                <li>Google TensorFlow Developers Certificate 보유</li>
+                <li>유튜브: <a href="https://www.youtube.com/cudanote" class="text-blue-600 underline">cudanote</a></li>
+            </ul>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+            본 보고서의 저작권은 브레인크루(brain-crew.com)에 있으며 무단 전재 및 재배포를 금합니다.<br>
+            문의: service@brain-crew.com<br>
+            <span class="italic">자료 발행일: 2025-11-10</span>
+        </div>
+    </div>
+</body>
+</html>
