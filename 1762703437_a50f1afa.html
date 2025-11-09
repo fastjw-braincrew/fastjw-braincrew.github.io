@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News Brief</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    body { font-family: 'Inter', sans-serif; font-display: swap; }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-blue-50 p-8 min-h-screen">
+  <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+    <!-- 헤더 섹션 -->
+    <div class="bg-blue-600 p-6 text-white">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold">Daily News Brief</h1>
+          <p class="text-blue-100">2025-11-10</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="material-icons">schedule</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 주요 뉴스 섹션 -->
+    <div class="p-6 space-y-6">
+      <!-- 핵심 이슈 -->
+      <div class="glass-effect p-5 rounded-xl border-l-4 border-blue-600">
+        <h2 class="text-lg font-bold text-blue-800 mb-2">오늘의 핵심 이슈</h2>
+        <p class="text-gray-700 leading-relaxed">• 경북 구미시에서 열린 '2025 구미라면축제'가 3일간 35만명의 방문객을 유치하며 성황리에 마무리되었습니다. 축제 기간 동안 48만 개의 갓 튀긴 라면이 판매되어 지역 경제에 큰 활력을 불어넣었습니다.</p>
+      </div>
+
+      <!-- 주요 뉴스 그리드 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 border rounded-lg hover:shadow-md transition-shadow bg-white">
+          <div class="flex items-center space-x-2 mb-2">
+            <i class="material-icons text-blue-600">trending_up</i>
+            <h3 class="font-semibold">시장 동향</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            • 축제 기간 동안 구미역 일대 상권에 큰 활력이 불어넣어졌으며, 라면 판매(3억 6000만 원) 및 이색 라면 레스토랑 매출(6억 원) 등으로 지역 경제 활성화 효과가 두드러졌습니다. 경부선 구미 열차표는 축제 기간 내내 매진 행진을 이어갔고, 대경선 역시 만석으로 운행되었습니다.
+          </p>
+        </div>
+
+        <div class="p-4 border rounded-lg hover:shadow-md transition-shadow bg-white">
+          <div class="flex items-center space-x-2 mb-2">
+            <i class="material-icons text-blue-600">business</i>
+            <h3 class="font-semibold">산업 동향</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            • '갓랜드' 부스에서는 신라면 케데헌 에디션 12만 개 등 총 48만 개의 라면이 판매되며 K-푸드 산업의 저력을 과시했습니다. 라면 축제를 통해 산업, 문화, 관광이 융합된 도심형 축제 모델이 확립되었으며, 글로벌 K-푸드 축제로의 도약 가능성을 확인했습니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 주요 인사이트 -->
+      <div class="bg-blue-50 p-4 rounded-xl">
+        <h2 class="text-lg font-bold text-blue-800 mb-3">핵심 인사이트</h2>
+        <div class="space-y-2">
+          <div class="flex items-start space-x-2">
+            <i class="material-icons text-blue-600">lightbulb</i>
+            <p class="text-sm text-gray-700 leading-relaxed">• QR코드 시스템 도입으로 대기줄 없이 편리하게 축제를 즐길 수 있었으며, 투명 비닐 가방에 담긴 '갓 튀긴 라면'이 SNS 인증샷 열풍을 일으키며 축제의 상징이 되었습니다.</p>
+          </div>
+          <div class="flex items-start space-x-2">
+            <i class="material-icons text-blue-600">lightbulb</i>
+            <p class="text-sm text-gray-700 leading-relaxed">• 다양한 테마존(가족·휴식·옛거리·골목야시장·자연공간·관람형 라운지) 및 체험형 콘텐츠(컵라면 휴게소, 라면 상상창작소 등)로 전 연령층이 만족할 수 있는 축제 운영이 이루어졌으며, 해외 인플루언서와 외신 기자단의 방문을 통한 글로벌 홍보 효과도 나타났습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 대응 방안 -->
+      <div class="border-t pt-4">
+        <h2 class="text-lg font-bold text-gray-800 mb-2">권장 대응 방안</h2>
+        <div class="flex items-start space-x-2">
+          <i class="material-icons text-blue-600">arrow_forward</i>
+          <p class="text-sm text-gray-700 leading-relaxed">• 향후 축제 운영 시, 방문객의 편의 및 체험 만족도를 더욱 높이기 위해 좌석 및 휴게 공간 확충, 가격 정책 개선, 회전율 관리 등이 필요합니다. 또한 지역 특산품 및 문화 행사와의 연계를 확대하여 지역 경제 활성화와 글로벌 K-푸드 홍보를 동시에 추진할 것을 권장합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+      © 2025 Daily News Brief. All rights reserved. <br>
+      출처: <a href="https://n.news.naver.com/mnews/article/421/0008593426?sid=102" class="text-blue-600 underline" target="_blank">뉴스1, 2025.11.09 기사</a>
+    </div>
+  </div>
+</body>
+</html>
