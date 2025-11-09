@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News Brief</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <!-- 헤더 섹션 -->
+        <div class="bg-blue-600 p-6 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-2xl font-bold">Daily News Brief</h1>
+                    <p class="text-blue-100">2025-11-10</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="material-icons">schedule</i>
+                    <span>AM 8:00 기준</span>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- 주요 뉴스 섹션 -->
+        <div class="p-6 space-y-6">
+            <!-- 핵심 이슈 -->
+            <div class="glass-effect p-4 rounded-xl border-l-4 border-blue-600">
+                <h2 class="text-lg font-bold text-blue-800 mb-2">오늘의 핵심 이슈</h2>
+                <p class="text-gray-700">• '라면 성지' 구미에서 열린 2025 구미 라면축제가 3일간 35만 명의 방문객을 모으며 대성황을 기록. 축제 기간 동안 48만 개의 갓 튀긴 라면이 판매되어 지역 상권 활성화와 K-푸드의 글로벌 가능성을 보여줌.</p>
+            </div>
+ 
+            <!-- 주요 뉴스 그리드 -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-blue-600">trending_up</i>
+                        <h3 class="font-semibold">시장 동향</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">• 축제 기간 중 라면 48만 개(약 3.6억 원)가 판매되고, 즉석 이색 라면 25종 5만 4천 그릇이 팔려 6억여 원의 매출을 기록. '갓 튀긴 라면'과 관련 굿즈(투명 비닐 가방 등)가 새로운 아이콘으로 떠오르며 인증샷 열풍을 일으킴.</p>
+                </div>
+ 
+                <div class="p-4 border rounded-lg hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-blue-600">business</i>
+                        <h3 class="font-semibold">산업 동향</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">• 구미역 일대를 라면 거리로 변신시킨 ‘라면 스트리트 475’ 등 도심형 축제 모델을 확립. QR코드 시스템 도입으로 대기 시간 최소화, 체험형 콘텐츠·공연·포토존 등 다양한 프로그램이 연령과 취향을 아우르며 지역 관광과 산업 홍보 효과 증대.</p>
+                </div>
+            </div>
+ 
+            <!-- 주요 인사이트 -->
+            <div class="bg-blue-50 p-4 rounded-xl">
+                <h2 class="text-lg font-bold text-blue-800 mb-3">핵심 인사이트</h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-blue-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">• 축제의 주요 성공 요인은 차별화된 신제품(갓 튀긴 라면), 편리한 주문 시스템(QR코드), 유명 공연 라인업, 그리고 가족·어린이 중심의 체험형 콘텐츠 조성에 있음.</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-blue-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">• 475m 라면 스트리트, 다양한 테마 라운지, 글로벌 인플루언서 및 외신 취재 등으로 지역의 문화·관광·산업 융합형 축제의 글로벌 성장 가능성 확인.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- 대응 방안 -->
+            <div class="border-t pt-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-2">권장 대응 방안</h2>
+                <div class="flex items-start space-x-2">
+                    <i class="material-icons text-blue-600">arrow_forward</i>
+                    <p class="text-sm text-gray-700">• 축제 성과 분석을 토대로 도심형 푸드 페스티벌을 지역 산업·관광·문화와 연계하여 지속적 성장 모델로 확장. 방문객 편의성(주문·좌석 관리) 개선, 글로벌 홍보 및 외국인 유치 전략 강화, 지역 특산물과 콜라보 상품 개발을 적극 추진할 것.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- 푸터 -->
+        <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+            <span>출처: <a href="https://n.news.naver.com/mnews/article/421/0008593426?sid=102" class="text-blue-700 underline" target="_blank">뉴스1 2025.11.09 정우용 기자</a></span>
+        </div>
+    </div>
+</body>
+</html>
