@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Agents: 아키텍처, 구성요소, 구현 가이드 분석 보고서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            letter-spacing: -0.025em;
+        }
+        .modern-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .modern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.05em;
+        }
+        .glass-effect {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .report-link:hover {
+            text-decoration: underline;
+            color: #DC2626;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-gray-900 p-6 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight">Deep Agents: 아키텍처, 구성요소, 구현 가이드</h1>
+                    <p class="text-gray-300">보고서 생성일: 2025-12-12 04:07:02</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="material-icons">analytics</i>
+                    <span>분석 보고서</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-6 space-y-6">
+            <!-- Executive Summary -->
+            <div class="glass-effect p-4 rounded-xl border-l-4 border-red-500">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-2">Executive Summary</h2>
+                <p class="text-gray-700">본 보고서는 LangChain Blog의 Deep Agents 아키텍처와 구성요소, 그리고 구현 가이드에 대한 심층 분석을 제공합니다. 단순 반복 루프 기반의 얕은 에이전트 한계를 넘어, 장기 계획, 분해, 협업 및 메모리 관리 등 복잡한 작업에 견딜 수 있는 "Deep Agent" 설계 패턴과 오픈소스 구현 전략을 정리합니다.</p>
+            </div>
+
+            <!-- Key Findings & Architecture -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="modern-card p-6 border rounded-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">trending_up</i>
+                        <h3 class="font-semibold">Key Findings</h3>
+                    </div>
+                    <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                        <li>기본형 에이전트(LLM+도구 루프)는 단순 반복 구조로 장기 계획 및 복잡한 작업에 취약</li>
+                        <li>Deep Agent는 시스템 프롬프트, 계획 도구, Sub-agent, 파일 시스템 등 4요소로 깊이·강인성 확보</li>
+                        <li>계획의 외화, 하위 에이전트 협업, 파일 기반 메모리 관리가 장기 실행에서 핵심</li>
+                        <li>오픈소스 패키지(deepagents)로 구현 가능하며, LangGraph 기반 가상 파일 시스템 포함</li>
+                    </ul>
+                </div>
+                <div class="modern-card p-6 border rounded-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">assessment</i>
+                        <h3 class="font-semibold">Deep Agent Architecture</h3>
+                    </div>
+                    <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                        <li>Reactive 루프(관찰→추론→도구 호출)와 Hierarchical(장기 계획, 과업 분해, 협업) 모델 병행</li>
+                        <li>계획 도구(todo.plan), Sub-agent 라우팅, 파일 시스템(VFS) 연동, 품질 검증 프로세스 내장</li>
+                        <li>계획-실행-기록-점검-통합의 반복적 loop로 일관성과 실행력 강화</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Analysis -->
+            <div class="modern-card p-6 border rounded-xl hover:shadow-2xl transition-all duration-300">
+                <div class="flex items-center space-x-2 mb-2">
+                    <i class="material-icons text-red-600">analytics</i>
+                    <h3 class="font-semibold">Analysis</h3>
+                </div>
+                <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                    <li>기존 에이전트의 한계(계획 부재, 분해 및 병렬처리 부족)를 극복하기 위해 Deep Agent는 명시적 계획 외화 및 단계적 실행을 강조</li>
+                    <li>Sub-agent 구조는 역할 분리와 전문화, 병렬/비동기 처리 등 모듈성과 확장성을 제공</li>
+                    <li>가상 파일 시스템은 대화 컨텍스트와 장기 메모리의 계층적 관리, 실패 시 복구 및 재시작을 용이하게 함</li>
+                    <li>보안 및 신뢰성: 파일 접근 권한 최소화, 샌드박싱, 정책 위반 감지, 레이트 리밋 등 실 운영에서 필수 고려사항</li>
+                    <li>성능·비용: 계획 단계/브랜치 제한, 캐시, 도구 호출 비용 상한, 자동 평가지표 및 QA 체계 필요</li>
+                </ul>
+            </div>
+
+            <!-- Insights -->
+            <div class="bg-gray-50 p-4 rounded-xl">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-3">Insights</h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">계획을 명시적으로 외화(no-op tool)하여 LLM이 항상 현재 상태를 인지·수정·추적하도록 유도, 장기 목표 정합성 유지에 기여</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">psychology</i>
+                        <p class="text-sm text-gray-700">Sub-agent의 모듈화 및 병렬화는 복잡한 과업 수행에서 효율성과 품질을 동시에 확보하는 핵심 전략</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="border-t pt-4">
+                <h2 class="text-xl font-bold tracking-tight text-gray-800 mb-2">Recommendations</h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">arrow_forward</i>
+                        <p class="text-sm text-gray-700">실제 운영 시 파일 시스템/도구 접근 권한을 최소화하고, 샌드박스 및 로깅·감사 체계를 구축할 것</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">arrow_forward</i>
+                        <p class="text-sm text-gray-700">장기 실행 워크플로에서는 체크포인트, 재시작, 예산(토큰/비용) 관리 및 자동 QA 프로세스를 연동할 것</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="modern-card p-6 border rounded-xl mt-6">
+                <div class="flex items-center space-x-2 mb-2">
+                    <i class="material-icons text-red-600">library_books</i>
+                    <h3 class="font-semibold">References</h3>
+                </div>
+                <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                    <li><a class="report-link" href="https://blog.langchain.com/deep-agents/" target="_blank">LangChain Blog — Deep Agents</a></li>
+                    <li><a class="report-link" href="https://openai.com/index/introducing-deep-research/?ref=blog.langchain.com" target="_blank">OpenAI — Deep Research</a></li>
+                    <li><a class="report-link" href="https://manus.im/?ref=blog.langchain.com" target="_blank">Manus</a></li>
+                    <li><a class="report-link" href="https://www.anthropic.com/claude-code?ref=blog.langchain.com" target="_blank">Claude Code (Anthropic)</a></li>
+                    <li><a class="report-link" href="https://github.com/hwchase17/deepagents?ref=blog.langchain.com" target="_blank">deepagents (GitHub)</a></li>
+                    <li><a class="report-link" href="https://github.com/hwchase17/deepagents/tree/master/examples/research?ref=blog.langchain.com" target="_blank">deepagents — research example</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Source Attribution -->
+        <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+            출처: LangChain Blog — Deep Agents (Harrison Chase)<br>
+            원문: <a class="report-link" href="https://blog.langchain.com/deep-agents/" target="_blank">https://blog.langchain.com/deep-agents/</a>
+        </div>
+    </div>
+</body>
+</html>
