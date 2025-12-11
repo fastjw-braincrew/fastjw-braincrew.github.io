@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+            letter-spacing: -0.025em;
+        }
+        .modern-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .modern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        h1, h2, h3 { 
+            font-weight: 700; 
+            letter-spacing: -0.05em;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <!-- 헤더 섹션 -->
+        <div class="bg-gray-900 p-6 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight">경기TP AI 기업지원 시스템 구축 방안</h1>
+                    <p class="text-gray-300">2025-12-11 22:01:18</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="material-icons">schedule</i>
+                    <span>Generated Report</span>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- 주요 섹션 -->
+        <div class="p-6 space-y-6">
+            <!-- 요약 -->
+            <div class="glass-effect p-4 rounded-xl border-l-4 border-red-500">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-2">Executive Summary</h2>
+                <p class="text-gray-700">
+                    경기도는 전국 최대의 제조 중소기업 집적지역임에도 불구하고, 기존 기업지원시스템이 디지털 전환과 AI 기술 도입 측면에서 뒤처져 있습니다. 본 보고서는 기업지원 고도화를 위한 AI 도입 필요성과 구체적인 적용 방안을 제시합니다. 실시간 정책 효과 분석, 자원 최적화, AI 기반 상담·진단·매칭·심사 시스템 등을 통해 지원성과와 정책 효과를 극대화할 수 있습니다.
+                </p>
+            </div>
+ 
+            <!-- 주요 발견 & 분석 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="modern-card p-6 border rounded-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">trending_up</i>
+                        <h3 class="font-semibold">Key Findings</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        • 경기도 내 제조 중소기업 25,000여개, 제조공장 80,000여개로 전국 1위 규모<br>
+                        • AI 도입 필요성: 정책 효과 분석 지연, 비효율적 기업 지원 현황 파악, 인력·예산의 한계<br>
+                        • AI 적용 분야: 실시간 정책 효과 분석, 내부 자원 최적화, 다국어 AI 상담, 기업진단·맞춤추천, AI 사전 심사, 기술·인재·구인 매칭 플랫폼 구축
+                    </p>
+                </div>
+ 
+                <div class="modern-card p-6 border rounded-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">business</i>
+                        <h3 class="font-semibold">Analysis</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        • AI 대시보드는 정책 효과를 연도 내 즉시 확인할 수 있게 하여 예산 집행의 효율성을 높임<br>
+                        • 내부 자원 배분의 자동화로 조직 운영 효율 극대화(재무, 인사, 기업관리, 정책수립 등)<br>
+                        • AI 챗봇·진단 플랫폼 도입 시, 상담 5배·민원 50% 감소 및 기업 맞춤 지원 가능<br>
+                        • AI 심사 시스템 도입 시, 심사 기간 최대 93% 단축 및 사기 패턴 99% 탐지<br>
+                        • 기술 및 인재 매칭 자동화로 지원 성과 5~10배 증가 예상
+                    </p>
+                </div>
+            </div>
+ 
+            <!-- 주요 인사이트 -->
+            <div class="bg-gray-50 p-4 rounded-xl">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-3">Insights</h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">• 동일 인력·예산으로 2~3배 이상의 기업지원 성과 달성 가능</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">lightbulb</i>
+                        <p class="text-sm text-gray-700">• 정책 효과성, 기업 만족도, 행정 효율성의 동시 혁신으로 기관의 대표성 강화</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- 권고사항 -->
+            <div class="border-t pt-4">
+                <h2 class="text-xl font-bold tracking-tight text-gray-800 mb-2">Recommendations</h2>
+                <div class="flex items-start space-x-2">
+                    <i class="material-icons text-red-600">arrow_forward</i>
+                    <p class="text-sm text-gray-700">
+                        • 단계별 AI 도입 로드맵 수립 및 시범사업 추진<br>
+                        • 데이터 연계·통합 표준화 작업 및 인프라 사전 구축<br>
+                        • 조직 내 AI 활용 역량 강화 및 실무자 교육 병행<br>
+                        • 제도적·재정적 지원 확대와 효과 분석 체계 마련
+                    </p>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- 푸터 -->
+        <div class="bg-gray-50 p-4 text-center text-sm text-gray-500">
+            <span>출처: 정책기획팀 업무보고, 2025.11</span>
+        </div>
+    </div>
+</body>
+</html>
