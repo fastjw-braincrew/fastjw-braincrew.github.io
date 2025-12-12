@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2024년 공공부문 AI 도입현황 연구</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @page { size: A4; margin: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+            letter-spacing: -0.025em;
+        }
+        .modern-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        .modern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.13);
+        }
+        h1, h2, h3 { 
+            font-weight: 700; 
+            letter-spacing: -0.05em;
+        }
+        .glass-effect {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-8 min-h-screen">
+    <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gray-900 p-6 text-white">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight">2024년 공공부문 AI 도입현황 연구</h1>
+                    <p class="text-gray-300 mt-1">A Study on the Current Status of Artificial Intelligence (AI) Introduction in Public Sector</p>
+                    <p class="text-gray-300 text-sm mt-2">임영모, 김리나, 안성원 &nbsp;|&nbsp; 발행일: 2025.04<br>보고서 번호: RE-188</p>
+                </div>
+                <div class="flex items-center mt-4 md:mt-0 space-x-2">
+                    <i class="material-icons text-red-600 text-3xl">analytics</i>
+                    <span class="font-medium">연구보고서</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="p-6 space-y-6">
+            <div class="glass-effect p-5 rounded-xl border-l-4 border-red-500">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-2 flex items-center">
+                    <i class="material-icons mr-2 text-red-600">summarize</i> Executive Summary
+                </h2>
+                <p class="text-gray-700">
+                    인공지능 도입이 공공부문에서 빠르게 확산되고 있으며, 2014~2023년 10년간 401개 기관 중 243개(60.6%)가 AI를 도입하였습니다. 2016년 알파고 쇼크 이후 도입 건수와 투자 금액이 급증하였고, 최근 대민서비스 및 업무효율화 등 다양한 목적에서 인공지능 활용이 자리잡고 있습니다. 기관별·정책분야별 특성과 사업 추진 단계별 이슈, 제도적·조직적 개선방향이 주요 논의 대상이었습니다.
+                </p>
+            </div>
+
+            <!-- Key Findings + Data grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="modern-card p-6 rounded-xl hover:shadow-2xl transition-all duration-300 glass-effect">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">trending_up</i>
+                        <h3 class="font-semibold text-lg">주요 발견사항</h3>
+                    </div>
+                    <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                        <li>10년간 인공지능 도입 계약 5,891건, 243개 기관이 AI 도입 (도입률 60.6%)</li>
+                        <li>2014년 134건 → 2023년 1,033건 (약 7배 증가), 투자금액 2,823억원 → 1조 3,279억원</li>
+                        <li>도입 목적: 업무효율화(55.2%), 대민서비스(44.8%)</li>
+                        <li>주요 기술: 언어지능(37%), 전문가시스템(34.7%), 시각지능(19.6%)</li>
+                        <li>기관 유형별 특성: 지자체는 대민서비스, 중앙정부는 업무효율화·연구 중심</li>
+                        <li>공급기업 1,788개 중 중소기업이 88.6% 수주</li>
+                        <li>정책분야별 도입: 일반공공행정(27%), 공공질서 및 안전(16.2%), 교통/물류(11.3%) 등</li>
+                    </ul>
+                </div>
+                <!-- 주요 통계/그래프 카드 -->
+                <div class="modern-card p-6 rounded-xl hover:shadow-2xl transition-all duration-300 glass-effect">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="material-icons text-red-600">bar_chart</i>
+                        <h3 class="font-semibold text-lg">핵심 통계 요약</h3>
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li>• 연평균 도입 성장률: +25% (2016~2023)</li>
+                        <li>• 기관구분별 도입률: 국가기관 85.9%, 지자체 100%, 준정부기관 85.5%</li>
+                        <li>• 평균 계약금액: 15.5억원 (국가기관 17.4억, 지자체 7.5억)</li>
+                        <li>• 주요 공급기업: LG CNS(87건), KT, 삼성SDS, 쌍용정보통신 등</li>
+                        <li>• 대표 도입 기술: 챗봇, TTS, OCR, 기계학습, 딥러닝, 자연어처리</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Analysis Section -->
+            <div class="modern-card p-6 rounded-xl hover:shadow-2xl transition-all duration-300 glass-effect">
+                <div class="flex items-center space-x-2 mb-2">
+                    <i class="material-icons text-red-600">assessment</i>
+                    <h3 class="font-semibold text-lg">분석 내용</h3>
+                </div>
+                <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                    <li>AI 도입은 2016년 이후 대폭 확대, 2020년 이후 대민서비스 분야(챗봇, 안내로봇 등) 확산 가속</li>
+                    <li>업무효율화 목적의 AI 도입이 전체 중 55%로 높으나, 최근 대민서비스 비중 상승</li>
+                    <li>기관별 특성 차별화: 중앙정부는 연구·고도화 중심, 지자체는 교통·재난안전 등 지역 밀착형 서비스 중심</li>
+                    <li>지자체는 예산 규모가 작고 공급기업 확보에 어려움이 있음(특히 수도권 외 지역)</li>
+                    <li>공공부문 AI 도입의 주요 걸림돌은 데이터 확보, 전문인력 부족, 재학습 등 운영예산 미확보로 인한 운영상 한계</li>
+                    <li>PoC 사업(파일럿/모델 개발)은 증가하였으나 후속 확산·정착 미흡</li>
+                </ul>
+            </div>
+
+            <!-- Insights Section -->
+            <div class="bg-gray-100 p-5 rounded-xl">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-3 flex items-center">
+                    <i class="material-icons text-red-600 mr-2">psychology</i> Insights
+                </h2>
+                <div class="space-y-2">
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">lightbulb</i>
+                        <p class="text-gray-700 text-sm">중앙정부와 지자체 간 AI 도입 환경 및 사업 구조의 차이가 크므로, 분리된 정책 수립·지원 체계가 필요함</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="material-icons text-red-600">lightbulb</i>
+                        <p class="text-gray-700 text-sm">AI 시스템의 성능 유지를 위한 재학습 예산, 데이터 관리 및 인수인계 체계의 제도적 정비가 시급</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations Section -->
+            <div class="border-t pt-4">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 mb-2 flex items-center">
+                    <i class="material-icons text-red-600 mr-2">arrow_forward</i> Recommendations
+                </h2>
+                <ul class="text-gray-700 text-sm space-y-2">
+                    <li class="flex space-x-2">
+                        <i class="material-icons text-red-600">check_circle</i>
+                        <span>공공기관 내부 AI 전문인력 양성 및 실무자 중심 신속한 의사결정 체계 구축</span>
+                    </li>
+                    <li class="flex space-x-2">
+                        <i class="material-icons text-red-600">check_circle</i>
+                        <span>AI 인프라(데이터, 컴퓨팅 파워) 사전 준비 및 유지관리 예산 확보, 데이터 관리 체계 강화</span>
+                    </li>
+                    <li class="flex space-x-2">
+                        <i class="material-icons text-red-600">check_circle</i>
+                        <span>디지털서비스 전문계약제도 등 신속 조달방식 활용 확대 및 민간 초거대 AI 서비스(클로버X, 에이닷 등) 활용 가이드라인 마련</span>
+                    </li>
+                    <li class="flex space-x-2">
+                        <i class="material-icons text-red-600">check_circle</i>
+                        <span>공급기업(특히 중소기업) 역량 제고 및 지역 간 AI 역량 격차 해소 지원 정책 강화</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer: Source & Attribution -->
+        <div class="bg-gray-50 p-4 text-center text-sm text-gray-500 border-t">
+            <div class="flex items-center justify-center space-x-2">
+                <i class="material-icons text-red-600">source</i>
+                <span>
+                    소프트웨어정책연구소, 임영모·김리나·안성원<br>
+                    발행일: 2025.04<br>
+                    연구보고서 RE-188<br>
+                    본 보고서는 과학기술정보통신부 정보통신진흥기금 지원으로 수행되었으며, 연구자의 견해로 공식입장과 다를 수 있음.<br>
+                    출처: <a href="https://data.g2b.go.kr:1443/pt/main/index.do" class="text-red-600 underline" target="_blank">조달정보개방포털</a> / <a href="https://www.g2b.go.kr/index.jsp" class="text-red-600 underline" target="_blank">나라장터</a><br>
+                    [SPRI 보고서]는 공공저작물 자유이용허락 표시기준 제4유형(출처표시-상업적이용금지-변경금지)에 따라 이용 가능
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
